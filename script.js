@@ -22,9 +22,9 @@ function getComputerChoice() {
 function playGame() {
     // plays a round and determines winner
     function playRound(playerSelection, computerSelection) {
-    if (playerSelection ==='rock' && computerSelection ==='rock' || playerSelection==='paper' && computerSelection==='paper' || playerSelection==='scissors' && computerSelection==='scissors') {
-        return 'It is a tie!'
-    };
+    if (playerSelection === computerSelection) {
+        return 'It is a tie!';
+    }
 
     if (playerSelection==='rock' && computerSelection==='scissors' || playerSelection==='scissors' && computerSelection==='paper' || playerSelection==='paper' && computerSelection==='rock') {
         return `You win! ${playerSelection} beats ${computerSelection}.`;
