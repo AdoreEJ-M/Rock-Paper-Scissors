@@ -17,3 +17,28 @@ function getComputerChoice() {
     }
     return computerChoice;
 }
+
+// Plays the game
+function playGame() {
+    // plays a round and determines winner
+    function playRound(playerSelection, computerSelection) {
+    if (playerSelection ==='rock' && computerSelection ==='rock' || playerSelection==='paper' && computerSelection==='paper' || playerSelection==='scissors' && computerSelection==='scissors') {
+        return 'It is a tie!'
+    };
+
+    if (playerSelection==='rock' && computerSelection==='scissors' || playerSelection==='scissors' && computerSelection==='paper' || playerSelection==='paper' && computerSelection==='rock') {
+        return `You win! ${playerSelection} beats ${computerSelection}.`;
+    } else {
+        return `You lose! ${computerSelection} beats ${playerSelection}.`;
+    };
+}
+// Gets choice from user and computer
+const playerSelection = prompt('Rock, Paper, Scissors!').toLowerCase();
+const computerSelection = getComputerChoice();
+alert(playRound(playerSelection, computerSelection));
+}
+
+// plays 5 rounds
+for (let round = 1; round <= 5; round++) {
+    playGame();
+}
