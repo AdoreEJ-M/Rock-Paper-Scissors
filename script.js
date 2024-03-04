@@ -20,6 +20,11 @@ function getComputerChoice() {
 
 // Plays the game
 function playGame() {
+    // Creates a reference to user choices
+    const rock = document.querySelector('.rock');
+    const paper = document.querySelector('.paper');
+    const scissors = document.querySelector('.scissors');
+
     // plays a round and determines winner
     function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
