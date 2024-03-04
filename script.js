@@ -38,12 +38,24 @@ function playGame() {
     };
 }
 // Gets choice from user and computer
-const playerSelection = prompt('Rock, Paper, Scissors!').toLowerCase();
-const computerSelection = getComputerChoice();
-alert(playRound(playerSelection, computerSelection));
-}
+rock.addEventListener('click', function() {
+    const playerSelection = 'rock';
+    const computerSelection = getComputerChoice();
+    alert(playRound(playerSelection, computerSelection));
+})
 
-// plays 5 rounds
-for (let round = 1; round <= 5; round++) {
-    playGame();
+paper.addEventListener('click', function() {
+    const playerSelection = 'paper';
+    const computerSelection = getComputerChoice();
+    alert(playRound(playerSelection, computerSelection));
+})
+
+scissors.addEventListener('click', function() {
+    const playerSelection = 'scissors';
+    const computerSelection = getComputerChoice();
+    alert(playRound(playerSelection, computerSelection))
+})
+
+
 }
+playGame();
