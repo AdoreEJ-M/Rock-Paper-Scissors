@@ -24,6 +24,13 @@ function playGame() {
     const rock = document.querySelector('.rock');
     const paper = document.querySelector('.paper');
     const scissors = document.querySelector('.scissors');
+    const resultDisplay = document.querySelector('p');
+
+    // Changes paragraph to results
+    function displayResult(result) {
+        resultDisplay.textContent = result;
+    }
+    
 
     // plays a round and determines winner
     function playRound(playerSelection, computerSelection) {
@@ -41,19 +48,22 @@ function playGame() {
 rock.addEventListener('click', function() {
     const playerSelection = 'rock';
     const computerSelection = getComputerChoice();
-    alert(playRound(playerSelection, computerSelection));
+    const result = playRound(playerSelection, computerSelection);
+    displayResult(result);
 })
 
 paper.addEventListener('click', function() {
     const playerSelection = 'paper';
     const computerSelection = getComputerChoice();
-    alert(playRound(playerSelection, computerSelection));
+    const result = playRound(playerSelection, computerSelection);
+    displayResult(result);
 })
 
 scissors.addEventListener('click', function() {
     const playerSelection = 'scissors';
     const computerSelection = getComputerChoice();
-    alert(playRound(playerSelection, computerSelection))
+    const result = playRound(playerSelection, computerSelection);
+    displayResult(result);
 })
 
 
