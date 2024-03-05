@@ -1,5 +1,11 @@
 body {
     text-align: center;
+    background-color: #ED6A5A;
+}
+
+h1,
+button, {
+    color: #F4F1BB;
 }
 
 .container {
@@ -10,10 +16,12 @@ body {
 }
 
 p {
+    color: #e0db7c;
     font-size: 25px;
 }
 
 button {
     padding: 8px 10px;
     font-size: 1em;
+    background-color: #0aaf99;
 }
